@@ -1,7 +1,19 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+package ru.netology
+fun main() {
+    val itemPrice = 5000
+    val itemProcent = 0.0075
+    val discountStart = 35
+    val totalPrice=itemPrice+discountStart
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val amount = if(itemProcent*itemPrice > discountStart) {
+
+        (totalPrice-discountStart)*itemProcent+itemPrice
+    }
+ else
+    {
+        totalPrice
+    }
+
+
+print (amount)
 }
